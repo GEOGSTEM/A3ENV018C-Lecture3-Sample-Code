@@ -1,0 +1,30 @@
+#ifndef INCLUDE_CONFIG_H
+#define INCLUDE_CONFIG_H
+
+#define SENSOR SENSOR_SHT40
+
+static String campaign_name = "CampaignName";
+static String organisation_name = "OrganisationName";
+static String device_name = "DeviceName";
+static bool use_AP_mode = true;
+static unsigned int measure_interval = 60000;
+static String AP_SSID = "My SSID";
+static String AP_PASS = "My password";
+static String STA_SSID = "Use this SSID";
+static String STA_PASS = "and password";
+static String monitor_URL = "http://api.example.com:80/";
+static String upload_password = "PASSWORD";
+
+static uint16_t const HTTP_port = 80;
+static uint16_t const HTTPS_port = 443;
+
+static unsigned int const display_refresh_interval = 5; /* seconds */
+static unsigned int const start_wait_time = 6000; /* milliseconds */
+static unsigned int const reboot_wait_time = 6000; /* milliseconds */
+static unsigned int const WiFi_wait_time = 20000; /* milliseconds */
+static unsigned int const WiFi_check_interval = 10000; /* milliseconds */
+static unsigned int const serial_baudrate = 115200; /* milliseconds */
+static unsigned int const reinitialize_interval = 15000; /* milliseconds */
+static unsigned char const reset_pin = 34;
+
+#endif /* INCLUDE_CONFIG_H */
