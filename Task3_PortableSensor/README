@@ -4,6 +4,7 @@ Board
 	Boards Manager: esp32 (3.0.5)
 	Board: TTGo LoRa32-OLED
 	Board Revision: TTGo LoRa32-OLED (1.6.1)
+
 Libraries:
 	RTClib (2.1.4)
 	Adafruit BusIO (1.16.1)
