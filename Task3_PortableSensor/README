@@ -1,0 +1,73 @@
+Board
+	Additional Boards Manager URLs:
+		https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json
+	Boards Manager: esp32 (3.0.5)
+	Board: TTGo LoRa32-OLED
+	Board Revision: TTGo LoRa32-OLED (1.6.1)
+Libraries:
+	RTClib (2.1.4)
+	Adafruit BusIO (1.16.1)
+	Adafruit SSD1306 (2.5.11)
+		Adafruit GFX Library (1.11.10)
+	Adafruit BME280 (2.2.4) optional
+	Adafruit SHT4x Library (1.0.5) optional
+		Adafruit SH11x Library (2.1.11)
+		Adafruit Unified Sensor (1.1.14)
+	PsychicHttp (1.2.1)
+		UrlEncode (1.0.1)
+		ArduinoJson (7.2.0)
+
+Setup:
+	Copy files in "SDCard" to SD card if SD card is used
+	Copy "config.h.example" to "config.h"
+	Edit "config.h"
+
+	SENSOR:
+		either "SENSOR_BME280" or "SENSOR_SHT40"
+
+	organisation_name, campaign_name, device_name:
+		Identities of the organisation, campaign and device respectively
+
+	use_AP_mode:
+		"true" to provide WiFi access point, or
+		"false" to use an existing WiFi
+
+	AP_SSID, AP_PASS:
+		The SSID and password for the provided WiFi
+
+	STA_SSID, STA_PASS:
+		The SSID and password for the existing WiFi to connect
+
+	monitor_URL:
+		URL of monitor server
+
+	upload_password:
+		Password for uploading data to monitor server
+
+	start_wait_time:
+		Milliseconds delay after device boot-up
+
+	reboot_wait_time:
+		Milliseconds delay before reboot
+
+	WiFi_wait_time:
+		Milliseconds for connecting existed WiFi
+
+	WiFi_check_interval:
+		Interval in milliseconds to update WiFi state
+
+	serial_baudrate:
+		Baud rate of the serial port
+
+	reinitialize_interval:
+		Milliseconds delay to re-try after error on start up
+
+	reset_pin:
+		Pin to control the loading of settings
+
+To modify elements:
+	Edit "Alone1.ino":
+		modify "measure" to fit how the values measured
+		modify fields "struct Data", "data_fields[]" "CSV_Data()" and "pretty_Data()"
+	Edit "SDCard/script.js":
+		modify "data_fields"
